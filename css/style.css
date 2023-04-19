@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap');
+@import "./bootstrap.css";
+:root{
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 32px;    
+    line-height: 1.5;
+    letter-spacing: 1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+}
+a{
+    outline: none;
+    text-decoration: none;
+}
+a:hover{
+    color: inherit;
+}
+input,button,textarea,select{
+    font: inherit;
+    border: none;
+}
+ol,li{
+    list-style: none;
+}
+img,svg,picture,canvas,video{
+    max-inline-size: 100%;
+    block-size: 100%;
+}
+.sr-only{
+    clip: (1px,1px,1px,1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+.container-fluid{
+    background-image: url("../images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: auto;
+}
+.row{
+    background-image: url("../images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    margin: 0 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.slide{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    z-index: 3;
+}
+.left{
+    background-image: url('../images/pattern-quotes.svg');
+    background-repeat: no-repeat;
+    background-size: 80px;
+    padding: 40px 0;
+    background-position-x: 80px;
+}
+.left p{
+    width: calc(50vw + 80px);
+}
+ .z-1{
+    z-index: -1;
+ }
+.button{
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    bottom: -20px;
+    left: 20%;
+    border-radius: 50px;
+    background-color: white;
+    padding: 0.8rem 1.5rem;
+    
+ }
+ @media screen and (max-width:768px) {
+    .row{
+        background-size: contain;
+    }
+    .container-fluid{
+        font-size: 24px;
+    }
+ }
+
+ @media screen and (max-width:993px) {
+    .row{
+        background-position: top;
+    }
+    .left{
+        background-position-x: center ;
+    }
+    .left p{
+        width: 100% !important;
+        text-align: center !important;
+    }
+ }
